@@ -32,51 +32,40 @@ function table(){
 }
 
 function add(){
-    var productsName= document.getElementById('productsName').value
+    var productsProduct= document.getElementById('productsProduct').value
     var productsAmount = parseInt(document.getElementById('productsAmount').value)
-    students.push({id: studentID, name: productsName, score: productsAmount})
+    orderSumary.push({Product: productsProduct, Amount: productsAmount})
     scores.push(productsAmount)
 
-    sumary()
+    Sumary()
 }
 
 function Sumary(){
     
-    var i = 0;
-    let dataList =  document.getElementById("dataList");
-    dataList.innerHTML=''
-    while(i < students.length){
+    var w = 0;
+    let orderList =  document.getElementById("orderList");
+    orderlist.innerHTML=''
+    while(w < orderSumary.length){
        
-        var listItem = document.createElement("section");
+        var orederItem = document.createElement("section");
 
-        console.log(students[i]);
-        listItem.classList.add("row");
+        console.log(orderSumary[w]);
+        orderItem.classList.add("row");
 
-        var id = document.createElement("section");
-        id.innerText = students[i].id;
-        listItem.appendChild(id);
-        id.classList.add("col");
+        var Product = document.createElement("section");
+        Product.innerText = orderSumarys[w].Product;
+        orderItem.appendChild(Product);
+        Product.classList.add("col");
         
-        var name = document.createElement("section");
-        name.innerText = students[i].name;
-        listItem.appendChild(name);
-        name.classList.add("col");
-
-        var score = document.createElement("section")
-        score.innerText = students[i].score;
-        listItem.appendChild(score);
-        score.classList.add("col");
-
-        
-
-        if(students[i].score < 60){
-            score.classList.add("lowscore");
+        var Amount = document.createElement("section");
+        Amount.innerText = orderSumary[w].Amount;
+        orderItem.appendChild(Amount);
+        Amount.classList.add("col");
 
             
-        }
 
-        dataList.appendChild(listItem);  
-        i = i + 1; // alternative i++
+        orderList.appendChild(listItem);  
+        w = w + 1; // alternative i++
         
     }
 
