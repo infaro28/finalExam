@@ -38,8 +38,8 @@ function add(){
     var AmountInput = parseInt(document.getElementById('AmountInput').value)
     AmountID.innerText= AmountInput
     Sumary()
-
     mult()
+
 }
 function Sumary(){
     let sumaryTable =  document.getElementById("sumaryTable");
@@ -102,14 +102,23 @@ function Sumary4(){
 
 
 function mult(AmountID,PriceID) {
-    return (parseInt(AmountID) * parseInt(PriceID));
+    let ttL = (parseInt(AmountID) * parseInt(PriceID));
+    return ttL
+}
+
+function show(){
+    
+    let ttL = mult();
+    console.log(ttL)
+    totalID.innerText = ttL
+
 }
 
 function total() {
-    alert('You hit!');
+    alert('Total to pay');
 }
 
-function toBUY() {
-    alert('You hit!');
+function toBuy() {
+    alert('Your purchase is confirmed');
 }
 
