@@ -1,37 +1,26 @@
+var products = [];
+
 function table(){
     
     var i = 0;
     let dataList =  document.getElementById("dataList");
     dataList.innerHTML=''
-    while(i < students.length){
+    while(i < products.length){
        
         var listItem = document.createElement("section");
 
-        console.log(students[i]);
+        console.log(products[i]);
         listItem.classList.add("row");
 
-        var id = document.createElement("section");
-        id.innerText = students[i].id;
-        listItem.appendChild(id);
-        id.classList.add("col");
+        var Product = document.createElement("section");
+        Product.innerText = products[i].id;
+        listItem.appendChild(Product);
+        Product.classList.add("col");
         
-        var name = document.createElement("section");
-        name.innerText = students[i].name;
-        listItem.appendChild(name);
-        name.classList.add("col");
-
-        var score = document.createElement("section")
-        score.innerText = students[i].score;
-        listItem.appendChild(score);
-        score.classList.add("col");
-
-        
-
-        if(students[i].score < 60){
-            score.classList.add("lowscore");
-
-            
-        }
+        var price = document.createElement("section");
+        price.innerText = students[i].price;
+        listItem.appendChild(price);
+        price.classList.add("col");
 
         dataList.appendChild(listItem);  
         i = i + 1; // alternative i++
