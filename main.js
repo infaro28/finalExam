@@ -116,9 +116,29 @@ function show(){
 
 function total() {
     alert('Total to pay');
+    
 }
 
 function toBuy() {
     alert('Your purchase is confirmed');
+    let AmountID =  document.getElementById("AmountID");
+    AmountID.innerText= " "
+
+    alert('Your purchase is confirmed');
+    let AmountID1 =  document.getElementById("AmountID1");
+    AmountID1.innerText= " "
+
+    alert('Your purchase is confirmed');
+    let AmountID2 =  document.getElementById("AmountID2");
+    AmountID2.innerText= " "
+
+    alert('Your purchase is confirmed');
+    let AmountID3 =  document.getElementById("AmountID3");
+    AmountID3.innerText= " "
+
+    alert('Your purchase is confirmed');
+    let AmountID4 =  document.getElementById("AmountID4");
+    AmountID4.innerText= " "
+
 }
 
