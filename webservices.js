@@ -21,7 +21,7 @@ function fetchData(){
        students.push(element);
       });
      
-     ************ table();
+     table();
 
     };
 
