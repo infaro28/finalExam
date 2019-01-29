@@ -12,10 +12,10 @@ function table(){
         console.log(products[i]);
         listItem.classList.add("row");
 
-        var Product = document.createElement("section");
-        Product.innerText = products[i].id;
-        listItem.appendChild(Product);
-        Product.classList.add("col");
+        var name = document.createElement("section");
+        name.innerText = products[i].id;
+        listItem.appendChild(name);
+        name.classList.add("col");
         
         var price = document.createElement("section");
         price.innerText = products[i].price;
