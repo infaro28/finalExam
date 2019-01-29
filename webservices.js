@@ -15,10 +15,10 @@ function fetchData(){
         return;
       }
 
-      var remoteStudents = JSON.parse(request.responseText);
+      var remoteProduct = JSON.parse(request.responseText);
 
-      remoteStudents.forEach(element => {
-       students.push(element);
+      remoteProduct.forEach(element => {
+       products.push(element);
       });
      
      table();
