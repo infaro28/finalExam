@@ -13,12 +13,61 @@
 <body class = "container">
 
     <div class="jumbotron">
-            <h1 class="display-4">Product Catalog</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
+            
+            <font color="purple" face="Freestyle Script" ><h1>  Product Catalog </h1></font>
+
+            <hr class="my-2">
             <div id = "dataList" class="lead"> </div>
-            <br>
-            <a class="btn btn-secondary" btn-lg" href="#" role="button">BUY</a>
+    </div>
+
+    <div class="jumbotron">
+
+            <p class="lead">Order Sumary:</p>
+            <hr class="my-4">
+
+            <div id = "Order" class = "container">
+                <div class="row">
+                    <section class="col" id = "col1" ><b>id </b></section>
+                    <section class="col" id = "col2"><b>name </b></section>
+                    <section class="col" id = "col3">score</section>
+                    </div>
+                        
+            </div>
+
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+               Add
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id = "form" class="input-group mb-3">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input class="form-control" id="nameID" placeholder="name" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    </div>
+                                    <div class="col">
+                                        <input class="form-control" id="amountID" placeholder="amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="add()">Add</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btn btn-dark" btn-lg" href="#" role="button">BUY</a>
     </div>
     
 
