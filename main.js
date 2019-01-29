@@ -32,10 +32,10 @@ function table(){
 }
 
 function add(){
-    var productsProduct= document.getElementById('productsProduct').value
-    var productsAmount = parseInt(document.getElementById('productsAmount').value)
-    orderSumary.push({Product: productsProduct, Amount: productsAmount})
-    scores.push(productsAmount)
+    var ProductID= document.getElementById('ProductID').value
+    var AmountID = parseInt(document.getElementById('AmountID').value)
+    orderSumary.push({Product: ProductID, Amount: AmountID})
+    Amount.push(AmountID)
 
     Sumary()
 }
@@ -44,7 +44,7 @@ function Sumary(){
     
     var w = 0;
     let orderList =  document.getElementById("orderList");
-    orderlist.innerHTML=''
+    orderList.innerHTML=''
     while(w < orderSumary.length){
        
         var orederItem = document.createElement("section");
