@@ -1,5 +1,5 @@
 var products = [];
-var orderSumary = [];
+//var orderSumary = [];
 
 function table(){
     
@@ -32,48 +32,82 @@ function table(){
 }
 
 function add(){
-    var ProductID= document.getElementById('ProductID').innerText
-    var PriceID = parseInt(document.getElementById('PriceID').innerText)
-    var AmountID = parseInt(document.getElementById('AmountID').value)
-    orderSumary.push({Product: ProductID, Price: PriceID, Amount: AmountID})
-    
 
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID.innerText= AmountInput
     Sumary()
+    mult()
 }
 
+function add1(){
+
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID1 =  document.getElementById("AmountID1");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID1.innerText= AmountInput
+    Sumary()
+    mult()
+}
+function add(){
+
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID.innerText= AmountInput
+    Sumary()
+    mult()
+}
+function add(){
+
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID.innerText= AmountInput
+    Sumary()
+    mult()
+}
+function add(){
+
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID.innerText= AmountInput
+    Sumary()
+    mult()
+}function add(){
+
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID");
+    var AmountInput = parseInt(document.getElementById('AmountInput').value)
+    //sumaryTable.push({Amount: AmountID})
+    AmountID.innerText= AmountInput
+    Sumary()
+    mult()
+}
+
+
 function Sumary(){
-    
-    var w = 0;
-    let orderList =  document.getElementById("orderList");
-    orderList.innerHTML=''
-    while(w < orderSumary.length){
-       
-        var orderItem = document.createElement("section");
+    let sumaryTable =  document.getElementById("sumaryTable");
+    let AmountID =  document.getElementById("AmountID"); 
+}
 
-        console.log(orderSumary[w]);
-        orderItem.classList.add("row");
 
-        var Product = document.createElement("section");
-        Product.innerText = orderSumary[w].Product;
-        orderItem.appendChild(Product);
-        Product.classList.add("col");
 
-        var Price = document.createElement("section");
-        Price.innerText = orderSumary[w].Price;
-        orderItem.appendChild(Price);
-        Price.classList.add("col");
-        
-        var Amount = document.createElement("section");
-        Amount.innerText = orderSumary[w].Amount;
-        orderItem.appendChild(Amount);
-        Amount.classList.add("col");
+function mult(AmountID,PriceID) {
+    return (parseInt(AmountID) * parseInt(PriceID));
+}
 
-            
+function total() {
+    alert('You hit!');
+}
 
-        orderList.appendChild(orderItem);  
-        w = w + 1; // alternative i++
-        
-    }
-
-   
+function toBuy(){
+    alert('Your order is confirmed');
 }

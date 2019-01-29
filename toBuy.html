@@ -16,73 +16,104 @@
             <p class="lead">Order  Sumary:</p>
             <hr class="my-4">
                 
-            <table class="table">
+            <table class="table" id="sumaryTable">
                 <thead>
                     <tr>
-                    <th scope="col"> </th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Amount</th>
+                        <th scope="col"> </th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Total</th>
                     </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th scope="row"> 
-                        <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="add()">
                             Add
                         </button>
                     </th>
                     <td>Bed</td>
-                    <td> 255 </td>
-                    <td>  
-                      
-                    </td>
+                    <td id = PriceID> 255 </td>
+                    <td id = AmountID>  </td>
+                    <td id=totalID>  </td>
                 </tr>
                 <tr>
                     <th scope="row"> 
-                        <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="add1()">
                             Add
                         </button>
                     </th>
                     <td>Bench</td>
-                    <td>29.99</td>
-                    <td>  </td>
+                    <td id = PriceID1>29.99</td>
+                    <td id = AmountID1>  </td>
+                    <td id=totalID1>  </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
-                                Add
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="add()">
+                            Add
                         </button>
                     </th>
                     <td>Chair</td>
-                    <td>9.99</td>
-                    <td> </td>
+                    <td id = PriceID2>9.99</td>
+                    <td id = AmountID2>  </td>
+                    <td id=totalID2>  </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="add()">
                             Add
                         </button> 
                     </th>
                     <td>Couch</td>
-                    <td>50</td>
-                    <td>  </td>
+                    <td id = PriceID3>50</td>
+                    <td id = AmountID3>  </td>
+                    <td id=totalID3>  </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+                        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" onclick="add()">
                             Add
                         </button>
                     </th>
                     <td>Pillow</td>
-                    <td>5</td>
-                    <td> </td>
+                    <td id = PriceID4>5</td>
+                    <td id = AmountID4>  </td>
+                    <td id=totalID4>  </td>
                 </tr>
                 </tbody>
             </table>
 
-         
-            <button type="button" class="btn btn-outline-danger btn-lg btn-block">BUY</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">cuanto quier comprar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id = "form" class="input-group mb-3">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input class="form-control" id="AmountInput" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="add()" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+            <button type="button" class="btn btn-outline-danger btn-block" onclick="total()">TO PAY</button>           
+            <button type="button" class="btn btn-outline-dark btn-lg btn-block" onclick="toBuy()">BUY</button>
 
         </div>
     </div>
