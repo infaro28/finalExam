@@ -18,7 +18,7 @@ function fetchData(){
       var remoteProduct = JSON.parse(request.responseText);
 
       remoteProduct.forEach(element => {
-       products.push(element);
+          products.push(element);
       });
      
      table();

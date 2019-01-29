@@ -13,7 +13,7 @@ function table(){
         listItem.classList.add("row");
 
         var name = document.createElement("section");
-        name.innerText = products[i].id;
+        name.innerText = products[i].name;
         listItem.appendChild(name);
         name.classList.add("col");
         
