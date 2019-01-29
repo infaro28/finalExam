@@ -18,7 +18,7 @@ function table(){
         Product.classList.add("col");
         
         var price = document.createElement("section");
-        price.innerText = students[i].price;
+        price.innerText = products[i].price;
         listItem.appendChild(price);
         price.classList.add("col");
 
