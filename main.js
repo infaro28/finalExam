@@ -32,10 +32,11 @@ function table(){
 }
 
 function add(){
-    var ProductID= document.getElementById('ProductID').value
+    var ProductID= document.getElementById('ProductID').innerText
+    var PriceID = parseInt(document.getElementById('PriceID').innerText)
     var AmountID = parseInt(document.getElementById('AmountID').value)
-    orderSumary.push({Product: ProductID, Amount: AmountID})
-    Amount.push(AmountID)
+    orderSumary.push({Product: ProductID, Price: PriceID, Amount: AmountID})
+    
 
     Sumary()
 }
@@ -47,15 +48,20 @@ function Sumary(){
     orderList.innerHTML=''
     while(w < orderSumary.length){
        
-        var orederItem = document.createElement("section");
+        var orderItem = document.createElement("section");
 
         console.log(orderSumary[w]);
         orderItem.classList.add("row");
 
         var Product = document.createElement("section");
-        Product.innerText = orderSumarys[w].Product;
+        Product.innerText = orderSumary[w].Product;
         orderItem.appendChild(Product);
         Product.classList.add("col");
+
+        var Price = document.createElement("section");
+        Price.innerText = orderSumary[w].Price;
+        orderItem.appendChild(Price);
+        Price.classList.add("col");
         
         var Amount = document.createElement("section");
         Amount.innerText = orderSumary[w].Amount;
@@ -64,7 +70,7 @@ function Sumary(){
 
             
 
-        orderList.appendChild(listItem);  
+        orderList.appendChild(orderItem);  
         w = w + 1; // alternative i++
         
     }

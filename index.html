@@ -24,50 +24,52 @@
 
             <p class="lead">Order Sumary:</p>
             <hr class="my-4">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Add</th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row"> + </th>
+                    <td>Bed</td>
+                    <td> 255 </td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <th scope="row"> + </th>
+                    <td>Bench</td>
+                    <td>29.99</td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <th scope="row">+</th>
+                    <td>Chair</td>
+                    <td>9.99</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <th scope="row"> + </th>
+                    <td>Couch</td>
+                    <td>50</td>
+                    <td>  </td>
+                </tr>
+                <tr>
+                    <th scope="row">+</th>
+                    <td>Pillow</td>
+                    <td>5</td>
+                    <td> </td>
+                </tr>
+                </tbody>
+            </table>
 
-            <div id = "orderList" class = "container">
-                <div class="row">
-                    <section class="col" id = "col1" ><b>Produt</b></section>
-                    <section class="col" id = "col2"><b>Amount</b></section>
-                    </div>
-                        
-            </div>
-            <br>
-
-            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
-               Add
-            </button>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Information</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body">
-                            <form id = "form" class="input-group mb-3">
-                                <div class="form-row">
-                                    <div class="col">
-                                        <input class="form-control" id="ProductID" placeholder="Product" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    </div>
-                                    <div class="col">
-                                        <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="add()">Save</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <a class="btn btn-dark" btn-lg" href="#" role="button">BUY</a>
+            
+            <button type="button" class="btn btn-outline-dark" disabled>BUY</button>
     </div>
     
 
