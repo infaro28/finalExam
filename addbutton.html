@@ -1,93 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ok</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="site.css" />
+    <script src="main.js"></script>
+    <script src="webservices.js"></script>
+</head>
+<body class="container" >
 
-            <div id = "orderList" class = "container">
-                    <div class="row">
-                        <section class="col" id = "col1" ><b>Produt</b></section>
-                        <section class="col" id = "col2"><b>Price</b></section>
-                        <section class="col" id = "col3"><b>Amount</b></section>
+    <div class="jumbotron">
+        <font face="Freestyle Script" size = "7rem" > Order Summary </font>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+                Add
+            </button>
+            <a class="btn btn-outline-dark" href="index.html"  role="button" >Back</a>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-    
-                            
-                </div>
-                <br>
-    
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
-                   Add
-                </button>
-    
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Information</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                <form id = "form" class="input-group mb-3">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <p id="ProductID">BED</p>
-                                        </div>
-                                        <div class="col">
-                                            <p id="PriceID">255</p>
-                                        </div>
-                                        <div class="col">
-                                            <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        </div>
-                                    </div>
-                                  
-                                    <div class="form-row">
-                                        <div class="col">
-                                                <p id="ProductID1"> BENCH </p>
-                                        </div>
-                                        <div class="col">
-                                                <p id="PriceID1">29.99</p>
-                                        </div>
-                                        <div class="col">
-                                            <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col">
-                                                <p id="ProductID1"> CHAIR </p>
-                                        </div>
-                                        <div class="col">
-                                                <p id="PriceID1">9.99</p>
-                                        </div>
-                                        <div class="col">
-                                            <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col">
-                                                <p id="ProductID1"> COUCH </p>
-                                        </div>
-                                        <div class="col">
-                                                <p id="PriceID1">50</p>
-                                        </div>
-                                        <div class="col">
-                                            <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col">
-                                                <p id="ProductID1"> PILLOW </p>
-                                        </div>
-                                        <div class="col">
-                                                <p id="PriceID1">5</p>
-                                        </div>
-                                        <div class="col">
-                                            <input class="form-control" id="AmountID" placeholder="Amount" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                        </div>
-                                    </div>
-                              
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="add()">Save</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+                    <div class="modal-body">
+                        <div class = "container" id = "dataListmod" > </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon1" onclick="add()">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <hr class="my-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    Product
+                </div>
+                <div class="col-sm">
+                    Total
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="my-2">
+
+           
+        <div class="container">
+                <div class="row">
+                  <div class="col-8"></div>
+                  <div class="col-4">
+                    <div class="mb-1">TOTAL: </div> 
+                    <button type="button" class="btn btn-outline-danger" onclick="check()">Checkout</button> 
+                  </div>
+                </div>
+              </div>
+    </div>
+    
+    
+
+        
+
+    <img src="pic.jpg" class="img-fluid" alt="Responsive image">
+
+       
+    
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
