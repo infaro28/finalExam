@@ -6,8 +6,12 @@ function add(){
     while(i < productos.length){
         var product = document.getElementById(`${i}`);
         productos[i].amount = parseInt(product.value)
+        if (product.value = ""){
+            productos[i].amount = 0;
+        }
         i = i+1;
     };
+    tablemod();
 };
 
 function table(){
